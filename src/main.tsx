@@ -1,11 +1,13 @@
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
+import App from './App.tsx';
+import Home from "./pages/Home.tsx";
+import Houses from './pages/Houses.tsx';
+import Characters from './pages/Characters.tsx';
+import Spells from './pages/Spells.tsx';
+
 import './index.css';
-import App from './App';
-import Home from "./pages/Home";
-import Houses from './pages/Houses';
-import Characters from './pages/Characters';
 
 const router = createBrowserRouter ([
   {
@@ -16,12 +18,16 @@ const router = createBrowserRouter ([
         element : <Home />
       },
       {
-        path : '/Houses',
+        path : '/houses',
         element : <Houses />
       },
       {
-        path : '/Characters',
+        path : '/characters',
         element : <Characters />
+      },
+      {
+        path:'/spells',
+        element: <Spells />
       }
     ]
   }
@@ -30,7 +36,7 @@ const router = createBrowserRouter ([
 const rootElement = document.getElementById("root");
 
 if (rootElement != null) {
-  ReactDOM.createRoot(rootElement).render(
+  createRoot(rootElement).render(
     <RouterProvider router={router} />
   );
 }
