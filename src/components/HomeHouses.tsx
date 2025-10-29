@@ -23,15 +23,6 @@ const houses: Houses[] = [
         <div className="home-houses_inner">
             {houses.map((house) => <HouseCard key={house.id} house={house}/>)
             }
-            <article className="house-card">
-                <header className="house-card_header">
-                    <h3 className="house-name">Gryfondor</h3>
-                </header>
-                <div className="house-points">
-                    <span>130</span>
-                    <span>points</span>
-                </div>
-            </article>
             </div>
     </section>
 );}
