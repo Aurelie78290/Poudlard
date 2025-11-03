@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router"
 
 import './Characters.css'
 
@@ -20,11 +21,12 @@ function Characters () {
         {console.log('je suis dans le return')}
         <h1>Characters</h1>
         <div className="charac-general">
-            {dataCharacter.map((character)=>
-            <article className="Charac-GlobalCard">
+            {dataCharacter.map((character)=> <Link to={`/characters/${character.id}`}>
+            <article key={character.id} className="Charac-GlobalCard">
                 <img src={character.image} alt={character.name}/>
                 <p>{character.name}</p>
-            </article>)}
+            </article>
+            </Link>)}
         </div>
         </section>
 }

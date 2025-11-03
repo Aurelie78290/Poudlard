@@ -1,0 +1,35 @@
+.charac-detail-page{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.charac-detail-title{
+    font-size: x-large;
+    color: #0582ca;
+    text-align: start;
+    padding-left: 6.5em;
+}
+
+.charac-detail-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.charac-detail-name {
+    font-size: xx-large;
+    color: #ffc300;
+}
+
+.charac-detail-img{
+    width: 260px;
+    height: 320px; /* uniform height */
+    object-fit: cover; /* crop to fill */
+    object-position: center top;
+    display: block;
+    border-radius: 10px;
+}

@@ -5,6 +5,7 @@ import App from './App.tsx';
 import Home from "./pages/Home.tsx";
 import Houses from './pages/Houses.tsx';
 import Characters from './pages/Characters.tsx';
+import CharactersDetails from './pages/CharactersDetails.tsx';
 import Spells from './pages/Spells.tsx';
 
 import './index.css';
@@ -24,6 +25,10 @@ const router = createBrowserRouter ([
       {
         path : '/characters',
         element : <Characters />
+      },
+      {
+        path : '/characters/:id',
+        element : <CharactersDetails />
       },
       {
         path:'/spells',
